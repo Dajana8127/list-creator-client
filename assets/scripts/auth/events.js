@@ -15,6 +15,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   // prevent
+  console.log(event)
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
@@ -40,15 +41,7 @@ const onSignOut = function () {
     .catch(ui.signOutFailure)
 }
 
-const addHandlers = () => {
-  $('#sign-up').on('submit', onSignUp)
-  $('sign-in').on('submit', onSignIn)
-  $('#change-password').on('submit', onChangePassword)
-  $('sign-out').on('submit', onSignOut)
-}
-
 module.exports = {
-  addHandlers,
   onSignUp,
   onSignIn,
   onChangePassword,
