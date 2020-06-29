@@ -13,4 +13,6 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create-list').on('submit', listEvents.onListCreate)
+  $('#all-lists').on('submit', listEvents.onGetLists)
+  $('#content').on('click', 'button', listEvents.onDeleteList)
 })

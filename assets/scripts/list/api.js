@@ -21,6 +21,28 @@ const listCreate = function (data) {
   })
 }
 
+const getLists = function () {
+  return $.ajax({
+    url: config.apiUrl + '/lists',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const deleteList = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/lists/${id}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  listCreate
+  listCreate,
+  getLists,
+  deleteList
 }

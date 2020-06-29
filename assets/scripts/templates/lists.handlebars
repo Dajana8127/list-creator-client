@@ -1,0 +1,16 @@
+{{#each lists as |list|}}
+  {{log list}}
+  <section data-id="{{list._id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{list.title}}
+    </h3>
+    <h6>Description:</h6>
+    <p>
+      {{list.description}}
+    </p>
+    <br>
+    <button class="btn btn-danger" data-id="{{list._id}}">Delete List</button>
+  </section>
+
+{{/each}}

@@ -19,6 +19,26 @@ const onListCreate = function (event) {
   $('#display-description').html(description)
 }
 
+const onGetLists = function (event) {
+  // prevent
+  event.preventDefault()
+  api.getLists()
+    .then(ui.getSuccess)
+    .catch(ui.getFailure)
+}
+
+const onDeleteList = function (event) {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  console.log(event)
+  console.log(id)
+  api.deleteList(id)
+    .then(ui.deleteListSuccess)
+    .catch(ui.deleteListFailure)
+}
+
 module.exports = {
-  onListCreate
+  onListCreate,
+  onGetLists,
+  onDeleteList
 }
