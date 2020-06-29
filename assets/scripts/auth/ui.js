@@ -13,6 +13,7 @@ const createFailure = function () {
 const signInSuccess = function (response) {
   $('#message').text('Sign in was successful! Welcome back ' + response.user.email + '!' + ' Click Create a New List to create a new list!')
   $('form').trigger('reset')
+  console.log(response.user)
   store.user = response.user
 }
 const signInFailure = function (response) {
