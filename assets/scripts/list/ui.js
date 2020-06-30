@@ -14,9 +14,9 @@ const createFailure = function () {
 const getSuccess = function (response) {
   const showListsHtml = showListsTemplate({ lists: response.lists })
   // compile html string via template
-  $('.content').append(showListsHtml)
-  $('form').trigger('reset')
-  $('#message').text('See all of your playlists!')
+  $('.content').html(showListsHtml)
+  // $('form').trigger('reset')
+  // $('#message').text('See all of your playlists!')
 }
 
 const getFailure = function () {
@@ -27,10 +27,34 @@ const getFailure = function () {
 const deleteListSuccess = (id) => {
   $(`[data-id="${id}"]`).remove()
   // $('.content'`[data-id="${id}"]`).empty() // doesnt work
-  $('#message').text('You successfully deleted a book!')
+  // $('#content').empty() // doesnt work
+  // $('#content[data-id=${id}]') doesnt work
+
+  // $('#content').hide()
+  // $('#content').trigger('reset')
+  // $('#content').show()
+
+  // $('#content').empty()
+  // getSuccess()
+  $('#clear-lists').trigger('submit')
+  $('#all-lists-button').trigger('click')
 }
 
 const deleteListFailure = () => {
+  $('#message').text('Deleting a list failed!')
+}
+
+const clearLists = () => {
+  $('.content').empty()
+}
+
+// Update each list
+const updateListSuccess = (id) => {
+  $('#message').text('You successfully updated a list!')
+  $('form').trigger('reset')
+}
+
+const updateListFailure = () => {
   $('#message').text('Deleting a list failed!')
 }
 
@@ -40,5 +64,8 @@ module.exports = {
   getSuccess,
   getFailure,
   deleteListSuccess,
-  deleteListFailure
+  deleteListFailure,
+  clearLists,
+  updateListSuccess,
+  updateListFailure
 }

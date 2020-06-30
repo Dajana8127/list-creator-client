@@ -37,8 +37,44 @@ const onDeleteList = function (event) {
     .catch(ui.deleteListFailure)
 }
 
+const onUpdateList = function (event) {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  console.log(id)
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+  api.updateList(data, id)
+    .then(ui.updateListSuccess)
+    .catch(ui.updateListFailure)
+}
+
+// const onUpdateList = function (event) {
+//   // prevent
+//   event.preventDefault()
+//   const title = $('#updated-title').val()
+//   $('#display-title').html(title)
+//
+//   const form = event.target
+//   const data = getFormFields(form)
+//   api.listUpdate(data)
+//     .then(ui.updateSuccess)
+//     .catch(ui.updateFailure)
+//
+//   const description = $('#updated-description').val()
+//   $('#display-description').html(description)
+// }
+
+const onClearLists = (event) => {
+  event.preventDefault()
+  ui.clearLists()
+}
+
 module.exports = {
   onListCreate,
   onGetLists,
-  onDeleteList
+  onDeleteList,
+  onUpdateList,
+  onClearLists
+  // onUpdateList
 }

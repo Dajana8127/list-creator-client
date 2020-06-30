@@ -12,7 +12,17 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <nav>
       <h1>List Creator</h1>
+      <form id='all-lists'>
+      <button type='submit' id='all-lists-button'>Get all lists</button>
+      </form>
+      <form id='clear-lists'>
+      <button type='submit'>Clear lists</button>
+      </form>
+    </nav>
+    <div class='row'>
+      <div class='left'>
       <p id='notification'>Please sign in to create a new list. Don't have an account? Sign up first.</p>
       <p id='message'></p>
       <section id='Sign-up'>
@@ -46,16 +56,12 @@
        <button id='chpw' type="submit">Change Password</button>
      </form>
     </section>
-    <div class="buttons">
       <form id="sign-out">
         <button type="submit">Sign Out</button>
       </form>
-      <form id='all-lists'>
-      <button type='submit'>Get all lists</button>
-      </form>
-    </div>
-    <br>
-    <section>
+</div>
+    <main>
+    <section id='Create-list'>
      <form id="create-list">
        <h2>Create a new list</h2>
        <input required placeholder="Title" type="text" name="list[title]" id='title'>
@@ -65,8 +71,15 @@
     </section>
     <p id='display-title'></p>
     <p id='display-description'></p>
-    <main>
-      <div id="content" class="content"></div>
-    </main>
+    <div id="content" class="content"></div>
+    <!-- Idea for updating list that you are working on right now -->
+    <!-- <form id="update-list">
+      <h2>Update the playlist</h2>
+      <input required placeholder="Title" type="text" name="list[title]" id='updated-title'>
+      <input required placeholder="Description" type="text" name="list[description]" id='updated-description'>
+      <button type='submit'>Update playlist</button>
+    </form> -->
+</div>
+</main>
     </body>
 </html>

@@ -11,6 +11,12 @@
     </p>
     <br>
     <button class="btn btn-danger" data-id="{{list._id}}">Delete List</button>
+    <br>
+    <p>Update list</p>
+    <form data-id="{{list._id}}">
+      <input required placeholder="Title" type="text" name="list[title]">
+      <input required placeholder="Description" type="text" name="list[description]">
+      <button class="btn btn-primary">Update List</button>
+    </form>
   </section>
-
 {{/each}}
