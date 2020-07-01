@@ -39,10 +39,10 @@ const onDeleteList = function (event) {
 
 const onUpdateList = function (event) {
   event.preventDefault()
-  const id = $(event.target).data('id')
-  console.log(id)
   const form = event.target
   const data = getFormFields(form)
+  const id = $(event.target).data('id')
+  console.log(id)
   console.log(data)
   api.updateList(data, id)
     .then(ui.updateListSuccess)

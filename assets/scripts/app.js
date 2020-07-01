@@ -17,7 +17,7 @@ $(() => {
   $('#content').on('click', 'button.btn.btn-danger', listEvents.onDeleteList)
   $('#clear-lists').on('submit', listEvents.onClearLists)
   // ideas for updating
-  $('#content').on('click', 'button.btn.btn-primary', listEvents.onUpdateList)
+  $('#content').on('submit', '.form', listEvents.onUpdateList)
   // $('#update-list').on('submit', listEvents.onUpdateList)
   $('#Change-password').hide()
   $('#all-lists').hide()

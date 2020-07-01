@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Personal Cookbook</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -13,17 +13,17 @@
     </head>
     <body>
       <nav>
-      <h1>List Creator</h1>
+      <h1>Personal Cookbook</h1>
       <form id='all-lists'>
-      <button type='submit' id='all-lists-button'>Get all lists</button>
+      <button type='submit' id='all-lists-button'>Get all recipes</button>
       </form>
       <form id='clear-lists'>
-      <button type='submit'>Clear lists</button>
+      <button type='submit'>Clear recipes</button>
       </form>
     </nav>
     <div class='row'>
       <div class='left'>
-      <p id='notification'>Please sign in to create a new list. Don't have an account? Sign up first.</p>
+      <p id='notification'>Please sign in to create your own cookbook. Don't have an account? Sign up first.</p>
       <p id='message'></p>
       <section id='Sign-up'>
       <h2>Sign Up</h2>
@@ -63,10 +63,10 @@
     <main>
     <section id='Create-list'>
      <form id="create-list">
-       <h2>Create a new list</h2>
+       <h2>Create a new recipe</h2>
        <input required placeholder="Title" type="text" name="list[title]" id='title'>
        <input required placeholder="Description" type="text" name="list[description]" id='description'>
-       <button type='submit'>Create a new playlist</button>
+       <button type='submit'>Create a new recipe</button>
      </form>
     </section>
     <p id='display-title'></p>
@@ -79,7 +79,8 @@
       <input required placeholder="Description" type="text" name="list[description]" id='updated-description'>
       <button type='submit'>Update playlist</button>
     </form> -->
+  </main>
 </div>
-</main>
+
     </body>
 </html>

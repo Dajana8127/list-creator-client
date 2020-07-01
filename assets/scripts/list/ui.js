@@ -52,6 +52,8 @@ const clearLists = () => {
 const updateListSuccess = (id) => {
   $('#message').text('You successfully updated a list!')
   $('form').trigger('reset')
+  $('#clear-lists').trigger('submit')
+  $('#all-lists-button').trigger('click')
 }
 
 const updateListFailure = () => {

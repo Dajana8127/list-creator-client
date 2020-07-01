@@ -35,7 +35,6 @@ main {
     &:empty {
       &::before {
         color: lighten($info, 25%);
-        content: 'Click Get Books';
         font-size: 10vh;
         line-height: .85;
         text-align: center;
