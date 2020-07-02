@@ -15,7 +15,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   // prevent
-  console.log(event)
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)

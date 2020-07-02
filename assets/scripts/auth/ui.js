@@ -3,7 +3,8 @@ const store = require('./../store.js')
 
 const createSuccess = function (response) {
   $('form').trigger('reset')
-  $('#message').text('You signed up successfully! Welcome ' + response.user.email + '!')
+  $('#message').text('You signed up successfully! Welcome ' + response.user.email + '! Sign in to start creating your own cookbook.')
+  $('#notification').hide()
 }
 const createFailure = function () {
   $('form').trigger('reset')
@@ -11,17 +12,17 @@ const createFailure = function () {
 }
 
 const signInSuccess = function (response) {
-  $('#message').text('Sign in was successful! Welcome back ' + response.user.email + '!' + ' Click Create a New List to create a new list!')
+  $('#message').text('Sign in was successful! Welcome back ' + response.user.email + '!' + ' Click Create a New Recipe to create a new recipe!')
   $('form').trigger('reset')
   $('#notification').hide()
   $('#Sign-up').hide()
   $('#Sign-in').hide()
   $('#Change-password').show()
-  $('#all-lists').show()
-  $('#clear-lists').show()
-  $('#Create-list').show()
+  $('#all-recipes').show()
+  $('#clear-recipes').show()
+  $('#Create-recipe').show()
   $('#sign-out').show()
-  console.log(response.user)
+  $('#new-recipe').hide()
   store.user = response.user
 }
 const signInFailure = function (response) {
@@ -42,6 +43,15 @@ const changePasswordFailure = function (response) {
 const signOutSuccess = function (response) {
   $('form').trigger('reset')
   $('#message').text('You signed out successfully!')
+  $('#notification').show()
+  $('#Sign-up').show()
+  $('#Sign-in').show()
+  $('#Change-password').hide()
+  $('#all-recipes').hide()
+  $('#clear-recipes').hide()
+  $('#Create-recipe').hide()
+  $('#sign-out').hide()
+  $('#new-recipe').hide()
   store.user.token = null
 }
 
