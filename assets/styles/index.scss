@@ -17,7 +17,7 @@ h3 {
 }
 
 #display-title {
-  color: #6a6a6a;
+  color: #b148d2;
   font-size: 42px;
 }
 
@@ -47,6 +47,7 @@ h3 {
 }
 
 .content {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -63,6 +64,7 @@ h3 {
     outline: none;
     padding: 1rem;
     position: relative;
+    text-align: center;
 }
 
 // .right {
@@ -112,14 +114,17 @@ p {
   font-weight: bold;
 }
 
+
 button {
-  background: #4B81E8;
+  background: #b148d2;
   color: white;
   border-radius: 10px;
 }
 
 input {
   margin: 5px;
+  background-color: #e6f3f8;
+  border: none;
 }
 
 .buttons {
@@ -138,4 +143,31 @@ form {
 
 #create-recipe input {
   width: 230px;
+}
+
+@media screen and (max-width: 550px) {
+  .right {
+    background-size: 500px;
+  }
+  .content section {
+    width: 50%;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 2vh;
+  }
+  input {
+    display: block;
+  }
+  #create-recipe {
+    display: block;
+  }
+  h1 {
+    margin-top: 65px;
+  }
 }
