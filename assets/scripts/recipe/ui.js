@@ -3,26 +3,35 @@ const store = require('./../store.js')
 const showRecipesTemplate = require('./../templates/recipes.handlebars')
 const createSuccess = function (response) {
   $('form').trigger('reset')
-  $('#message').text('Yaay! You created a new recipe!')
+  $('#message').show().text('Yaay! You created a new recipe!').delay(3000).fadeOut(800)
   store.recipe = response.recipe
   $('#new-recipe').show()
+  $('#mesage1').hide()
 }
 const createFailure = function () {
   $('form').trigger('reset')
-  $('#message').text('Creating a new recipe failed.')
+  $('#message').show().text('Creating a new recipe failed.')
+  $('#mesage1').hide()
 }
 
 const getSuccess = function (response) {
   const showRecipesHtml = showRecipesTemplate({ recipes: response.recipes })
   // compile html string via template
   $('.content').html(showRecipesHtml)
+  $('#new-recipe').hide()
   // $('form').trigger('reset')
-  $('#message').text('Now you can see all of your recepies in one place!')
+  if ($('.content').is(':empty')) {
+    $('#message').show().text("You don't have any recipes.").delay(3000).fadeOut(800)
+  } else {
+    $('#message').show().text('Now you can see all of your recepies in one place!').delay(3000).fadeOut(800)
+  }
+  $('#mesage1').hide()
 }
 
 const getFailure = function () {
   $('form').trigger('reset')
-  $('#message').text('Getting recipes failed.')
+  $('#message').show().text('Getting recipes failed.')
+  $('#mesage1').hide()
 }
 
 const deleteRecipeSuccess = (id) => {
@@ -39,26 +48,32 @@ const deleteRecipeSuccess = (id) => {
   // getSuccess()
   $('#clear-recipes').trigger('submit')
   $('#all-recipes-button').trigger('click')
+  $('#message1').show().text('You successfully deleted a recipe.').delay(3000).fadeOut(800)
+  $('#message').hide()
 }
 
 const deleteRecipeFailure = () => {
-  $('#message').text('Deleting a recipe failed!')
+  $('#message1').show().text('Deleting a recipe failed!')
 }
 
 const clearRecipes = () => {
   $('.content').empty()
+  $('#new-recipe').hide()
+  $('#mesage1').hide()
+  $('#message').text('You successfully cleared recipes.')
 }
 
 // Update each Recipe
 const updateRecipeSuccess = (id) => {
-  $('#message').text('You successfully updated a recipe!')
+  $('#message1').show().text('You successfully updated a recipe!').delay(3000).fadeOut(800)
   $('form').trigger('reset')
   $('#clear-recipes').trigger('submit')
   $('#all-recipes-button').trigger('click')
+  $('#message').hide()
 }
 
 const updateRecipeFailure = () => {
-  $('#message').text('Deleting a recipe failed!')
+  $('#message1').show().text('Something went wrong!')
 }
 
 module.exports = {
