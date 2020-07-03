@@ -8,11 +8,11 @@ I usually use Pinterest to find new, interesting recipes. This gave me the idea 
 
 # Visit the site
 
-Check out the Event Planner here: https://github.com/Dajana8127/cookbook-server.
+Check out the Personal Cookbook here: https://dajana8127.github.io/cookbook-client/.
 
 # Other Links:
 
-Back-end Repository:
+Back-end Repository: https://github.com/Dajana8127/cookbook-server.
 
 # Technologies Used:
 
