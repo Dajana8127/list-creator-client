@@ -121,7 +121,7 @@ button {
   border-radius: 10px;
 }
 
-input {
+input, textarea {
   margin: 5px;
   background-color: #e6f3f8;
   border: none;
@@ -143,6 +143,11 @@ form {
 
 #create-recipe input {
   width: 230px;
+}
+
+textarea {
+  position: relative;
+  top: 14px;
 }
 
 @media screen and (max-width: 550px) {

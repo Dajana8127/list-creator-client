@@ -3,7 +3,7 @@ const store = require('./../store.js')
 const showRecipesTemplate = require('./../templates/recipes.handlebars')
 const createSuccess = function (response) {
   $('form').trigger('reset')
-  $('#message').show().text('Yaay! You created a new recipe!').delay(3000).fadeOut(800)
+  $('#message').show().text('Yaay! You created a new recipe!').delay(4000).fadeOut(800)
   store.recipe = response.recipe
   $('#new-recipe').show()
   $('#mesage1').hide()
@@ -21,9 +21,9 @@ const getSuccess = function (response) {
   $('#new-recipe').hide()
   // $('form').trigger('reset')
   if ($('.content').is(':empty')) {
-    $('#message').show().text("You don't have any recipes.").delay(3000).fadeOut(800)
+    $('#message').show().text("You don't have any recipes.").delay(4000).fadeOut(800)
   } else {
-    $('#message').show().text('Now you can see all of your recepies in one place!').delay(3000).fadeOut(800)
+    $('#message').show().text('Now you can see all of your recepies in one place!').delay(4000).fadeOut(800)
   }
   $('#mesage1').hide()
 }
@@ -48,7 +48,7 @@ const deleteRecipeSuccess = (id) => {
   // getSuccess()
   $('#clear-recipes').trigger('submit')
   $('#all-recipes-button').trigger('click')
-  $('#message1').show().text('You successfully deleted a recipe.').delay(3000).fadeOut(800)
+  $('#message1').show().text('You successfully deleted a recipe.').delay(4000).fadeOut(800)
   $('#message').hide()
 }
 
@@ -65,7 +65,7 @@ const clearRecipes = () => {
 
 // Update each Recipe
 const updateRecipeSuccess = (id) => {
-  $('#message1').show().text('You successfully updated a recipe!').delay(3000).fadeOut(800)
+  $('#message1').show().text('You successfully updated a recipe!').delay(4000).fadeOut(800)
   $('form').trigger('reset')
   $('#clear-recipes').trigger('submit')
   $('#all-recipes-button').trigger('click')

@@ -3,7 +3,7 @@ const store = require('./../store.js')
 
 const createSuccess = function (response) {
   $('form').trigger('reset')
-  $('#message').show().text('You signed up successfully! Welcome ' + response.user.email + '! Sign in to start creating your own cookbook.').delay(3000).fadeOut(800)
+  $('#message').show().text('You signed up successfully! Welcome ' + response.user.email + '! Sign in to start creating your own cookbook.').delay(4000).fadeOut(800)
   $('#notification').hide()
   $('#mesage1').hide()
 }
@@ -14,7 +14,7 @@ const createFailure = function () {
 }
 
 const signInSuccess = function (response) {
-  $('#message').show().text('Sign in was successful! Welcome back ' + response.user.email + '!' + ' Click Create a New Recipe to create a new recipe!').delay(3000).fadeOut(800)
+  $('#message').show().text('Sign in was successful! Welcome back ' + response.user.email + '!' + ' Click Create a New Recipe to create a new recipe!').delay(4000).fadeOut(800)
   $('form').trigger('reset')
   $('#notification').hide()
   $('#Sign-up').hide()
@@ -36,7 +36,7 @@ const signInFailure = function (response) {
 }
 
 const changePasswordSuccess = function (response) {
-  $('#message').show().text('Your password is changed.').delay(3000).fadeOut(800)
+  $('#message').show().text('Your password is changed.').delay(4000).fadeOut(800)
   $('form').trigger('reset')
   $('#mesage1').hide()
 }
@@ -48,7 +48,7 @@ const changePasswordFailure = function (response) {
 
 const signOutSuccess = function (response) {
   $('form').trigger('reset')
-  $('#message').show().text('You signed out successfully!').delay(3000).fadeOut(800)
+  $('#message').show().text('You signed out successfully!').delay(4000).fadeOut(800)
   $('#notification').show()
   $('#Sign-up').show()
   $('#Sign-in').show()
