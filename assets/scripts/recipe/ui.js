@@ -17,7 +17,7 @@ const createFailure = function () {
 const getSuccess = function (response) {
   const showRecipesHtml = showRecipesTemplate({ recipes: response.recipes })
   // compile html string via template
-  $('.content').html(showRecipesHtml)
+  $('.content').show().html(showRecipesHtml)
   $('#new-recipe').hide()
   // $('form').trigger('reset')
   if ($('.content').is(':empty')) {

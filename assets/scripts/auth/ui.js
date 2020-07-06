@@ -59,6 +59,7 @@ const signOutSuccess = function (response) {
   $('#sign-out').hide()
   $('#new-recipe').hide()
   $('#mesage1').hide()
+  $('.content').hide()
   store.user.token = null
 }
 
