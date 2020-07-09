@@ -31,7 +31,7 @@ h3 {
 
 .left {
     background-image: url('public/left3.jpg');
-    background-size: 800px;
+    background-size: cover;
     border-right: white solid;
     min-height: 110vh;
     padding: 1rem;
@@ -41,7 +41,8 @@ h3 {
 
 .right {
     background-image: url('public/main9.jpg');
-    background-size: 1200px;
+    background-size: cover;
+    background-position: center center;
     padding: 2rem;
     width: 80%;
 }
@@ -130,7 +131,7 @@ input, textarea {
 .buttons {
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 40px;
 }
 
 .left {
@@ -151,9 +152,6 @@ textarea {
 }
 
 @media screen and (max-width: 550px) {
-  .right {
-    background-size: 500px;
-  }
   .content section {
     width: 50%;
   }
