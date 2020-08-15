@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Personal Cookbook</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="container">
+          <div class='row'>
+              <div class='left'>
+                  <p id='notification'>Please sign in to create your own cookbook. Don't have an account? Sign up first.</p>
+                  <section id='Sign-up'>
+                     <h2>Sign Up</h2>
+                     <form id="sign-up">
+                        <input type="text" required placeholder="Enter Email" name="credentials[email]">
+                        <br>
+                        <input type="password" required placeholder="Enter Password" name="credentials[password]">
+                        <br>
+                        <input type="password" required placeholder="Re-enter Password" name="credentials[password_confirmation]">
+                        <br>
+                        <button type="submit">Sign Up</button>
+                     </form>
+                  </section>
+                    <br>
+                  <section id='Sign-in'>
+                      <h2>Sign In</h2>
+                      <form id="sign-in">
+                        <input type="text" required placeholder="Enter Email" name="credentials[email]">
+                        <br>
+                        <input type="password" required placeholder="Enter Password" name="credentials[password]">
+                        <br>
+                        <button type="submit">Sign In</button>
+                      </form>
+                  </section>
+                  <section id="Change-password">
+                      <form id="change-password">
+                           <h2>Change Password</h2>
+                           <input required placeholder="Old Password" type="password" name="password[old]">
+                           <input required placeholder="New password" type="password" name="password[new]">
+                           <button id='chpw' type="submit">Change Password</button>
+                      </form>
+                   </section>
+                      <form id="sign-out">
+                            <button type="submit">Sign Out</button>
+                      </form>
+                      <br>
+                      <p id='message'></p>
+                      <br>
+                      <p id='message1'></p>
+              </div>
+              <div class='right'>
+                    <h1>Personal Cookbook</h1>
+                    <div class='buttons'>
+                       <form id='all-recipes'>
+                            <button type='submit' id='all-recipes-button'>Get all recipes</button>
+                       </form>
+                       <form id='clear-recipes'>
+                            <button type='submit'>Clear recipes</button>
+                       </form>
+                    </div>
+                  <section id='Create-recipe'>
+                      <form id="create-recipe">
+                           <h2>Create a new recipe</h2>
+                           <input required placeholder="Title" type="text" name="recipe[title]" id='title'>
+                           <!-- <input required placeholder="Ingredients" type="text" name="recipe[ingredients]" id='ingredients'> -->
+                           <textarea name="recipe[ingredients]" id='ingredients' placeholder="Ingredients" rows="1" cols="29"></textarea>
+                           <!-- <input required placeholder="Steps" type="text" name="recipe[steps]" id='steps'> -->
+                           <textarea name="recipe[steps]" id='steps' placeholder="Steps" rows="1" cols="29"></textarea>
+                           <button type='submit'>Create a new recipe</button>
+                      </form>
+                  </section>
+                    <div id='new-recipe'>
+                        <h3 id='display-title'></h3>
+                        <h3>Ingredients:</h3>
+                        <p id='display-ingredients'></p>
+                        <h3>Steps:</h3>
+                        <p id='display-steps'></p>
+                    </div>
+                    <div id="content" class="content"></div>
+                        <!-- Idea for updating recipe that you are working on right now -->
+                        <!-- <form id="update-recipe">
+                          <h2>Update the playrecipe</h2>
+                          <input required placeholder="Title" type="text" name="recipe[title]" id='updated-title'>
+                          <input required placeholder="Description" type="text" name="recipe[description]" id='updated-description'>
+                          <button type='submit'>Update playrecipe</button>
+                        </form> -->
+                  </div>
+          </div>
+      </div>
+    </body>
+</html>
