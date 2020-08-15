@@ -160,10 +160,7 @@ textarea {
 }
 
 
-@media screen and (max-width: 550px) {
-  .content section {
-    width: 50%;
-  }
+@media screen and (max-width: 925px) {
   h1 {
     font-size: 38px;
   }
@@ -207,12 +204,26 @@ textarea {
   .content section {
     width: 100%;
   }
+  #notification {
+    font-size: 3vw;
+  }
+  h2 {
+    font-size: 4.5vw
+  }
 }
 
-#notification {
-  font-size: 3vw;
+@media screen and (min-width: 1050px) {
+  .buttons {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+  }
 }
 
-h2 {
-  font-size: 4.5vw
+@media screen and (min-width: 1440px) {
+  .buttons {
+    position: absolute;
+    top: 10px;
+    right: 370px;
+  }
 }
