@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 
+.container {
+  display: flex;
+}
+
 h1, h2, h3 {
   color: white;
 }
@@ -25,8 +29,8 @@ h3 {
     border-top: white solid;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -165px;
-    margin-left: -165px;
+    // margin-right: -165px;
+    // margin-left: -165px;
 }
 
 .left {
@@ -155,6 +159,7 @@ textarea {
   font-size: 1.9vh;
 }
 
+
 @media screen and (max-width: 550px) {
   .content section {
     width: 50%;
@@ -174,7 +179,40 @@ textarea {
   #create-recipe {
     display: block;
   }
-  h1 {
-    margin-top: 65px;
+  .left {
+    width: 30%;
+    margin-left: 0px;
   }
+  .right {
+    width: 70%
+  }
+  input {
+    width: 22vw;
+    font-size: 10px;
+    margin: 0px;
+  }
+  button {
+    font-size: 12px;
+    margin: 5px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  .right h1 {
+    margin-top: 20px;
+  }
+  textarea {
+    font-size: 14px;
+  }
+  .content section {
+    width: 100%;
+  }
+}
+
+#notification {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 4.5vw
 }
